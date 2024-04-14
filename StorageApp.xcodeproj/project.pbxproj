@@ -15,6 +15,7 @@
 		155A53082BCB972F00225CB7 /* StorageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A53072BCB972F00225CB7 /* StorageAppUITests.swift */; };
 		155A530A2BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */; };
 		155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C882BCC2B50005B7BE0 /* ListView.swift */; };
+		155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		155A53072BCB972F00225CB7 /* StorageAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAppUITests.swift; sourceTree = "<group>"; };
 		155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		155E2C882BCC2B50005B7BE0 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		155A52EB2BCB972E00225CB7 /* StorageApp */ = {
 			isa = PBXGroup;
 			children = (
+				155E2C8A2BCC2C20005B7BE0 /* Model */,
 				155A52EC2BCB972E00225CB7 /* StorageAppApp.swift */,
 				155A52EE2BCB972E00225CB7 /* ContentView.swift */,
 				155A52F02BCB972F00225CB7 /* Assets.xcassets */,
@@ -128,6 +131,14 @@
 				155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */,
 			);
 			path = StorageAppUITests;
+			sourceTree = "<group>";
+		};
+		155E2C8A2BCC2C20005B7BE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
+				155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
 				155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */,
 			);
