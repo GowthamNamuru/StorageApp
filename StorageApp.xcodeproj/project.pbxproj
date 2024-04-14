@@ -14,6 +14,7 @@
 		155A52FE2BCB972F00225CB7 /* StorageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A52FD2BCB972F00225CB7 /* StorageAppTests.swift */; };
 		155A53082BCB972F00225CB7 /* StorageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A53072BCB972F00225CB7 /* StorageAppUITests.swift */; };
 		155A530A2BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */; };
+		155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C882BCC2B50005B7BE0 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		155A53032BCB972F00225CB7 /* StorageAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorageAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		155A53072BCB972F00225CB7 /* StorageAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAppUITests.swift; sourceTree = "<group>"; };
 		155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		155E2C882BCC2B50005B7BE0 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				155A52EE2BCB972E00225CB7 /* ContentView.swift */,
 				155A52F02BCB972F00225CB7 /* Assets.xcassets */,
 				155A52F22BCB972F00225CB7 /* Preview Content */,
+				155E2C882BCC2B50005B7BE0 /* ListView.swift */,
 			);
 			path = StorageApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
+				155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
