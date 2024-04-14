@@ -16,6 +16,9 @@
 		155A530A2BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */; };
 		155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C882BCC2B50005B7BE0 /* ListView.swift */; };
 		155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */; };
+		155E2C8F2BCC2CD1005B7BE0 /* FileListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */; };
+		155E2C922BCC30D2005B7BE0 /* SerreriaSobria.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155E2C902BCC30D2005B7BE0 /* SerreriaSobria.otf */; };
+		155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C942BCC3267005B7BE0 /* FileDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		155A53092BCB972F00225CB7 /* StorageAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		155E2C882BCC2B50005B7BE0 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadFile.swift; sourceTree = "<group>"; };
+		155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListItem.swift; sourceTree = "<group>"; };
+		155E2C902BCC30D2005B7BE0 /* SerreriaSobria.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SerreriaSobria.otf; sourceTree = "<group>"; };
+		155E2C942BCC3267005B7BE0 /* FileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +104,11 @@
 		155A52EB2BCB972E00225CB7 /* StorageApp */ = {
 			isa = PBXGroup;
 			children = (
+				155E2C912BCC30D2005B7BE0 /* Assets */,
+				155E2C8D2BCC2CC3005B7BE0 /* View */,
 				155E2C8A2BCC2C20005B7BE0 /* Model */,
 				155A52EC2BCB972E00225CB7 /* StorageAppApp.swift */,
 				155A52EE2BCB972E00225CB7 /* ContentView.swift */,
-				155A52F02BCB972F00225CB7 /* Assets.xcassets */,
 				155A52F22BCB972F00225CB7 /* Preview Content */,
 				155E2C882BCC2B50005B7BE0 /* ListView.swift */,
 			);
@@ -139,6 +146,32 @@
 				155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		155E2C8D2BCC2CC3005B7BE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */,
+				155E2C942BCC3267005B7BE0 /* FileDetails.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		155E2C912BCC30D2005B7BE0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				155E2C932BCC30EB005B7BE0 /* Fonts */,
+				155A52F02BCB972F00225CB7 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		155E2C932BCC30EB005B7BE0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				155E2C902BCC30D2005B7BE0 /* SerreriaSobria.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155E2C922BCC30D2005B7BE0 /* SerreriaSobria.otf in Resources */,
 				155A52F42BCB972F00225CB7 /* Preview Assets.xcassets in Resources */,
 				155A52F12BCB972F00225CB7 /* Assets.xcassets in Resources */,
 			);
@@ -271,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155E2C8F2BCC2CD1005B7BE0 /* FileListItem.swift in Sources */,
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
 				155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
+				155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */,
 				155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

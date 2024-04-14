@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DownloadFile {
+struct DownloadFile: Identifiable {
     var id: String { return name }
     let name: String
     let size: Int
