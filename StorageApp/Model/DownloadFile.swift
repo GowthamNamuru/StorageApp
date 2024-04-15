@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct DownloadFile: Identifiable {
+struct DownloadFile: Identifiable, Codable {
     var id: String { return name }
     let name: String
     let size: Int
     let date: Date
     static let empty = DownloadFile(name: "", size: 0, date: Date())
+}
+
+struct DownloadInfo {
+    let id: UUID
+    let name: String
+    let progress: Double
 }

@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ListView: View {
     @State var isDisplayingDownload = false
+    let model: SuperStorageModel
+
+    @State var files: [DownloadFile] = []
+    @State var lastErrorMessage = "None" {
+        didSet {
+            isDisplayingError = true
+        }
+    }
+
+    @State var isDisplayingError = false
+
     var body: some View {
         NavigationStack {
             VStack {
                 // The List of files available for download
                 List {
                     Section {
-                        ForEach(getMockData()) { file in
+                        if files.isEmpty {
+                            ProgressView().padding()
+                        }
+                        ForEach(files) { file in
                             Button {
                                 // action
                             } label: {
@@ -35,13 +49,29 @@ struct ListView: View {
                     }
 
                 }
+                .alert("Error", isPresented: $isDisplayingError, actions: {
+                    Button("Close", role: .cancel, action: {
+                        isDisplayingError = false
+                    })
+                }, message: {
+                    Text(lastErrorMessage)
+                })
+                .task {
+                    guard files.isEmpty else { return }
+
+                    do {
+                        files = try await model.availableFiles()
+                    } catch {
+                        lastErrorMessage = error.localizedDescription
+                    }
+                }
             }
         }
     }
 }
 
 #Preview {
-    ListView()
+    ListView(model: SuperStorageModel())
 }
 
 func getMockData() -> [DownloadFile] {
