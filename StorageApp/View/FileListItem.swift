@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct FileListItem: View {
+    let file: DownloadFile
     var body: some View {
         VStack(spacing: 8) {
             HStack {
-                Text("graphics-project-ver-1.tiff")
+                Text(file.name)
                 Spacer()
                 Image(systemName: "chevron.right")
             }
             HStack {
                 Image(systemName: "photo")
-                Text("3 MB")
+                Text(sizeFormatter.string(fromByteCount: Int64(file.size)))
                 Text(" ")
-                Text(dateFormatter.string(from: Date()))
+                Text(dateFormatter.string(from: file.date))
                 Spacer()
             }
             .padding(.leading, 10)
@@ -31,7 +32,7 @@ struct FileListItem: View {
 }
 
 #Preview {
-    FileListItem()
+    FileListItem(file: DownloadFile.empty)
 }
 
 let dateFormatter: DateFormatter = {

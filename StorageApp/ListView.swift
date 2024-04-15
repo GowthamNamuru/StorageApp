@@ -20,9 +20,21 @@ struct ListView: View {
     @State var isDisplayingError = false
     @State var status = ""
 
+    @State var selectedFile: DownloadFile = DownloadFile.empty {
+        didSet {
+            isDisplayingDownload = true
+        }
+    }
+
     var body: some View {
         NavigationStack {
             VStack {
+                // Deprecated
+//                NavigationLink(destination: DownloadView(file: selectedFile), isActive: $isDisplayingDownload) {
+//                    EmptyView()
+//                }
+//                .hidden()
+
                 // The List of files available for download
                 List {
                     Section {
@@ -31,11 +43,10 @@ struct ListView: View {
                         }
                         ForEach(files) { file in
                             Button {
-                                // action
+                                selectedFile = file
                             } label: {
-                                FileListItem()
+                                FileListItem(file: file)
                             }
-
                         }
                     } header: {
                         Label(" SuperStorage", systemImage: "externaldrive.badge.icloud")
@@ -44,10 +55,8 @@ struct ListView: View {
                             .padding(.bottom, 20)
 
                     } footer: {
-                        // TODO: -  Yet to update status
                         Text(status)
                     }
-
                 }
                 .alert("Error", isPresented: $isDisplayingError, actions: {
                     Button("Close", role: .cancel, action: {
@@ -71,6 +80,9 @@ struct ListView: View {
                         lastErrorMessage = error.localizedDescription
                     }
                 }
+            }
+            .navigationDestination(isPresented: $isDisplayingDownload) {
+                DownloadView(file: selectedFile)
             }
         }
     }
