@@ -17,8 +17,8 @@ struct ListView: View {
             isDisplayingError = true
         }
     }
-
     @State var isDisplayingError = false
+    @State var status = ""
 
     var body: some View {
         NavigationStack {
@@ -45,7 +45,7 @@ struct ListView: View {
 
                     } footer: {
                         // TODO: -  Yet to update status
-                        Text("Using 37% of available space, 221 duplicate files.")
+                        Text(status)
                     }
 
                 }
@@ -60,7 +60,13 @@ struct ListView: View {
                     guard files.isEmpty else { return }
 
                     do {
-                        files = try await model.availableFiles()
+                        async let files = try model.availableFiles()
+                        async let status = try model.status()
+
+                        let (fileResult, statusResult) = try await (files, status)
+
+                        self.files = fileResult
+                        self.status = statusResult
                     } catch {
                         lastErrorMessage = error.localizedDescription
                     }
