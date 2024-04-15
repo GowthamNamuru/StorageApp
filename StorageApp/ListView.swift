@@ -82,7 +82,7 @@ struct ListView: View {
                 }
             }
             .navigationDestination(isPresented: $isDisplayingDownload) {
-                DownloadView(file: selectedFile)
+                DownloadView(file: selectedFile).environmentObject(model)
             }
         }
     }

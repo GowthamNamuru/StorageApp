@@ -21,6 +21,7 @@
 		155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C942BCC3267005B7BE0 /* FileDetails.swift */; };
 		155E2C972BCC3C87005B7BE0 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C962BCC3C87005B7BE0 /* DownloadView.swift */; };
 		156258F72BCCC3D100226037 /* SuperStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258F62BCCC3D100226037 /* SuperStorageModel.swift */; };
+		156258F92BCCD9EA00226037 /* Downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258F82BCCD9EA00226037 /* Downloads.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		155E2C942BCC3267005B7BE0 /* FileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetails.swift; sourceTree = "<group>"; };
 		155E2C962BCC3C87005B7BE0 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		156258F62BCCC3D100226037 /* SuperStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStorageModel.swift; sourceTree = "<group>"; };
+		156258F82BCCD9EA00226037 /* Downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloads.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */,
 				155E2C942BCC3267005B7BE0 /* FileDetails.swift */,
 				155E2C962BCC3C87005B7BE0 /* DownloadView.swift */,
+				156258F82BCCD9EA00226037 /* Downloads.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				155E2C8F2BCC2CD1005B7BE0 /* FileListItem.swift in Sources */,
+				156258F92BCCD9EA00226037 /* Downloads.swift in Sources */,
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
 				155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
