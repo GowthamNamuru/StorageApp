@@ -12,13 +12,6 @@ struct ListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                // Programatically push the file download view
-                NavigationLink(destination: Text("Destination")) {
-                }
-                .navigationDestination(isPresented: $isDisplayingDownload) {
-                    EmptyView()
-                }.hidden()
-
                 // The List of files available for download
                 List {
                     Section {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FileDetails: View {
+    let file: DownloadFile
     let isDownloading: Bool
     @Binding var isDownloadActive: Bool
 
@@ -23,12 +24,12 @@ struct FileDetails: View {
                     if isDownloadActive {
                         ProgressView()
                     }
-                    Text("graphics-project-ver-1.tiff")
+                    Text(file.name)
                         .font(.title3)
                 }
                 .padding(.leading, 8)
 
-                Text("30.7 MB")
+                Text(sizeFormatter.string(fromByteCount: Int64(file.size)))
                     .font(.body)
                     .foregroundStyle(.indigo)
                     .padding(.leading, 8)
@@ -68,5 +69,12 @@ struct FileDetails: View {
 }
 
 #Preview {
-    FileDetails(isDownloading: true, isDownloadActive: .constant(true), downloadSingleAction: {}, downloadWithUpdatesAction: {}, downloadMultipleAction: {})
+    FileDetails(file: DownloadFile.empty, isDownloading: true, isDownloadActive: .constant(true), downloadSingleAction: {}, downloadWithUpdatesAction: {}, downloadMultipleAction: {})
 }
+
+let sizeFormatter: ByteCountFormatter = {
+  let formatter = ByteCountFormatter()
+  formatter.allowedUnits = [.useMB]
+  formatter.isAdaptive = true
+  return formatter
+}()

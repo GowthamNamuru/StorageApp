@@ -19,6 +19,7 @@
 		155E2C8F2BCC2CD1005B7BE0 /* FileListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */; };
 		155E2C922BCC30D2005B7BE0 /* SerreriaSobria.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155E2C902BCC30D2005B7BE0 /* SerreriaSobria.otf */; };
 		155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C942BCC3267005B7BE0 /* FileDetails.swift */; };
+		155E2C972BCC3C87005B7BE0 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E2C962BCC3C87005B7BE0 /* DownloadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListItem.swift; sourceTree = "<group>"; };
 		155E2C902BCC30D2005B7BE0 /* SerreriaSobria.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SerreriaSobria.otf; sourceTree = "<group>"; };
 		155E2C942BCC3267005B7BE0 /* FileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetails.swift; sourceTree = "<group>"; };
+		155E2C962BCC3C87005B7BE0 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				155E2C8E2BCC2CD1005B7BE0 /* FileListItem.swift */,
 				155E2C942BCC3267005B7BE0 /* FileDetails.swift */,
+				155E2C962BCC3C87005B7BE0 /* DownloadView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
 				155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
+				155E2C972BCC3C87005B7BE0 /* DownloadView.swift in Sources */,
 				155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */,
 				155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */,
 			);
