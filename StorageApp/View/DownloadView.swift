@@ -40,6 +40,10 @@ struct DownloadView: View {
             if !model.downloads.isEmpty {
                 Downloads(downloads: model.downloads)
             }
+
+            if let fileData = fileData {
+                FilePreview(fileData: fileData)
+            }
         }
         .toolbar(content: {
             Button(action: {
@@ -47,7 +51,7 @@ struct DownloadView: View {
             }, label: {
                 Text("Cancel All")
             })
-            .disabled(true)
+            .disabled(model.downloads.isEmpty)
         })
     }
 }
