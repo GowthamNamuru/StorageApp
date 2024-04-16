@@ -23,6 +23,8 @@
 		156258F72BCCC3D100226037 /* SuperStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258F62BCCC3D100226037 /* SuperStorageModel.swift */; };
 		156258F92BCCD9EA00226037 /* Downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258F82BCCD9EA00226037 /* Downloads.swift */; };
 		156258FB2BCCDDEE00226037 /* FilePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258FA2BCCDDEE00226037 /* FilePreview.swift */; };
+		156258FD2BCE117D00226037 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258FC2BCE117D00226037 /* Utility.swift */; };
+		156258FF2BCE122500226037 /* ByteAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156258FE2BCE122500226037 /* ByteAccumulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		156258F62BCCC3D100226037 /* SuperStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStorageModel.swift; sourceTree = "<group>"; };
 		156258F82BCCD9EA00226037 /* Downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloads.swift; sourceTree = "<group>"; };
 		156258FA2BCCDDEE00226037 /* FilePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreview.swift; sourceTree = "<group>"; };
+		156258FC2BCE117D00226037 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		156258FE2BCE122500226037 /* ByteAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteAccumulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			children = (
 				155E2C8B2BCC2C2C005B7BE0 /* DownloadFile.swift */,
 				156258F62BCCC3D100226037 /* SuperStorageModel.swift */,
+				156258FC2BCE117D00226037 /* Utility.swift */,
+				156258FE2BCE122500226037 /* ByteAccumulator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,10 +326,12 @@
 				155E2C8F2BCC2CD1005B7BE0 /* FileListItem.swift in Sources */,
 				156258F92BCCD9EA00226037 /* Downloads.swift in Sources */,
 				156258FB2BCCDDEE00226037 /* FilePreview.swift in Sources */,
+				156258FD2BCE117D00226037 /* Utility.swift in Sources */,
 				155A52EF2BCB972E00225CB7 /* ContentView.swift in Sources */,
 				155E2C8C2BCC2C2C005B7BE0 /* DownloadFile.swift in Sources */,
 				155A52ED2BCB972E00225CB7 /* StorageAppApp.swift in Sources */,
 				155E2C972BCC3C87005B7BE0 /* DownloadView.swift in Sources */,
+				156258FF2BCE122500226037 /* ByteAccumulator.swift in Sources */,
 				155E2C952BCC3267005B7BE0 /* FileDetails.swift in Sources */,
 				155E2C892BCC2B50005B7BE0 /* ListView.swift in Sources */,
 				156258F72BCCC3D100226037 /* SuperStorageModel.swift in Sources */,

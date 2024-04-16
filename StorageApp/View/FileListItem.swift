@@ -34,10 +34,3 @@ struct FileListItem: View {
 #Preview {
     FileListItem(file: DownloadFile.empty)
 }
-
-let dateFormatter: DateFormatter = {
-  let formatter = DateFormatter()
-  formatter.dateStyle = .short
-  formatter.timeStyle = .short
-  return formatter
-}()

@@ -72,10 +72,3 @@ struct FileDetails: View {
 #Preview {
     FileDetails(file: DownloadFile.empty, isDownloading: true, isDownloadActive: .constant(true), downloadSingleAction: {}, downloadWithUpdatesAction: {}, downloadMultipleAction: {})
 }
-
-let sizeFormatter: ByteCountFormatter = {
-  let formatter = ByteCountFormatter()
-  formatter.allowedUnits = [.useMB]
-  formatter.isAdaptive = true
-  return formatter
-}()

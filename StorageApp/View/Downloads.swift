@@ -12,7 +12,7 @@ struct Downloads: View {
     var body: some View {
         ForEach(downloads) { download in
             VStack(alignment: .leading, content: {
-                Text(download.name)
+                Text(download.name).font(.caption)
                 ProgressView(value: download.progress)
             })
         }
