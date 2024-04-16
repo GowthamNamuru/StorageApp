@@ -17,7 +17,32 @@ struct DownloadView: View {
     /// Should display download activity indicatior
     @State var isDownloadActive = false
 
-    @State var downloadTask: Task<Void, Error>?
+    @State var downloadTask: Task<Void, Error>? {
+        didSet {
+            timerTask?.cancel()
+
+            guard isDownloadActive else { return }
+            let startTime = Date().timeIntervalSince1970
+
+            let timerSequence = Timer
+                .publish(every: 1, tolerance: 1, on: .main, in: .common)
+                .autoconnect()
+                .map { date -> String in
+                    let duration = Int(date.timeIntervalSince1970 - startTime)
+                    return "\(duration)s"
+                }
+                .values
+
+            timerTask = Task {
+                for await duration in timerSequence {
+                    self.duration = duration
+                }
+            }
+        }
+    }
+
+    @State var timerTask: Task<Void, Error>?
+    @State var duration = ""
 
     var body: some View {
         List {
@@ -37,7 +62,11 @@ struct DownloadView: View {
                     isDownloadActive = true
                     downloadTask = Task {
                         do {
-                            fileData = try await model.downloadWithProgress(file: file)
+                            try await SuperStorageModel
+                                .$supportsPartialDowloads
+                                .withValue(file.name.hasSuffix(".jpeg")) {
+                                    fileData = try await model.downloadWithProgress(file: file)
+                                }
                         } catch { }
                         isDownloadActive = false
                     }
@@ -47,6 +76,10 @@ struct DownloadView: View {
             )
             if !model.downloads.isEmpty {
                 Downloads(downloads: model.downloads)
+            }
+            if !duration.isEmpty {
+                Text("Duration: \(duration)")
+                    .font(.caption)
             }
 
             if let fileData = fileData {
@@ -66,7 +99,7 @@ struct DownloadView: View {
         .onDisappear {
             fileData = nil
             model.reset()
-            downloadTask = nil
+            downloadTask?.cancel()
         }
     }
 }

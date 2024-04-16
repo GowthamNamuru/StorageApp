@@ -10,6 +10,8 @@ import Foundation
 class SuperStorageModel: ObservableObject {
     @Published var downloads: [DownloadInfo] = []
 
+    @TaskLocal static var supportsPartialDowloads = false
+
     func downloadWithProgress(file: DownloadFile) async throws -> Data? {
         return try await downloadWithProgress(fileName: file.name, name: file.name, size: file.size)
     }
@@ -45,7 +47,7 @@ class SuperStorageModel: ObservableObject {
 
         var accumulator = ByteAccumulator(name: name, size: size)
 
-        while !stopDownloads, !accumulator.checkCompleted() {
+        while await !stopDownloads, !accumulator.checkCompleted() {
             while !accumulator.isBatchComplete, let byte = try await asyncDonwloadIterator.next() {
                 accumulator.append(byte)
             }
@@ -59,7 +61,7 @@ class SuperStorageModel: ObservableObject {
             print(accumulator.description)
         }
 
-        if stopDownloads {
+        if await stopDownloads, !Self.supportsPartialDowloads {
             throw CancellationError()
         }
 
@@ -116,8 +118,8 @@ class SuperStorageModel: ObservableObject {
         return String(decoding: data, as: UTF8.self)
     }
 
-    var stopDownloads = false
-    func reset() {
+    @MainActor var stopDownloads = false
+    @MainActor func reset() {
         stopDownloads = true
         downloads.removeAll()
     }
