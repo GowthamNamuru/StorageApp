@@ -33,30 +33,31 @@ struct FileDetails: View {
                     .font(.body)
                     .foregroundStyle(.indigo)
                     .padding(.leading, 8)
+                if !isDownloading {
+                    HStack {
+                        // Silver button action
+                        Button(action: downloadSingleAction) {
+                            Image(systemName: "arrow.down.app")
+                            Text("Silver")
+                        }
+                        .tint(Color.teal)
 
-                HStack {
-                    // Silver button action
-                    Button(action: downloadSingleAction) {
-                        Image(systemName: "arrow.down.app")
-                        Text("Silver")
-                    }
-                    .tint(Color.teal)
+                        Button(action: downloadWithUpdatesAction) {
+                            Image(systemName: "arrow.down.app.fill")
+                            Text("Gold")
+                        }
+                        .tint(Color.pink)
 
-                    Button(action: downloadWithUpdatesAction) {
-                        Image(systemName: "arrow.down.app.fill")
-                        Text("Gold")
+                        Button(action: downloadMultipleAction) {
+                            Image(systemName: "dial.max.fill")
+                            Text("Cloud 9")
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(Color.purple)
                     }
-                    .tint(Color.pink)
-
-                    Button(action: downloadMultipleAction) {
-                        Image(systemName: "dial.max.fill")
-                        Text("Cloud 9")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color.purple)
+                    .buttonStyle(.bordered)
+                    .font(.subheadline)
                 }
-                .buttonStyle(.bordered)
-                .font(.subheadline)
             }
 
         } header: {

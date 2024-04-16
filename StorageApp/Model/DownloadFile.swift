@@ -15,7 +15,7 @@ struct DownloadFile: Identifiable, Codable {
     static let empty = DownloadFile(name: "", size: 0, date: Date())
 }
 
-struct DownloadInfo: Identifiable {
+struct DownloadInfo: Identifiable, Equatable {
     let id: UUID
     let name: String
     var progress: Double

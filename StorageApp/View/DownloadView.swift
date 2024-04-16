@@ -21,7 +21,7 @@ struct DownloadView: View {
         List {
             FileDetails(
                 file: file,
-                isDownloading: false,
+                isDownloading: !model.downloads.isEmpty,
                 isDownloadActive: $isDownloadActive,
                 downloadSingleAction: {
                     isDownloadActive = true
@@ -45,6 +45,8 @@ struct DownloadView: View {
                 FilePreview(fileData: fileData)
             }
         }
+        .animation(.easeInOut(duration: 0.33), value: model.downloads)
+        .listStyle(InsetGroupedListStyle())
         .toolbar(content: {
             Button(action: {
                 // TODO: Yet to add button action
