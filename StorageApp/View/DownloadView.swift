@@ -71,7 +71,13 @@ struct DownloadView: View {
                         isDownloadActive = false
                     }
                 }, downloadMultipleAction: {
-
+                    isDownloadActive = true
+                    Task {
+                        do {
+                            fileData = try await model.multiDownloadWithProgress(file: file)
+                        } catch {}
+                        isDownloadActive = false
+                    }
                 }
             )
             if !model.downloads.isEmpty {
